@@ -8,16 +8,29 @@ body {
   color: white;
 }
 
-.instructions {
+menu{
   z-index: 10000;
   visibility: visible;
   width: 25%;
-  text-align: left;
+  /*text-align: left;*/
   letter-spacing: 0.15rem;
   color: #fff;
-  margin: 1%;
+  /*margin: 1%;*/
   font-weight: 100;
   position: absolute;
+  font-size:0.75rem;
+}
+
+.instructions {
+  z-index: 10000;
+  visibility: visible;
+  /*width: 25%;*/
+  /*text-align: left;*/
+  letter-spacing: 0.15rem;
+  color: #fff;
+  /*margin: 1%;*/
+  font-weight: 100;
+  /*position: absolute;*/
   font-size:0.75rem;
 }
 
