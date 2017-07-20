@@ -65,52 +65,52 @@
 			var mesh = THREEx.Planets.createVenus();
 			scene.add(mesh);
 		};
-		//
-		// function renderEarth() {
-		// 	var mesh = THREEx.Planets.createMoon();
-		// 	scene.add(mesh);
-		// 	var earthMesh = THREEx.Planets.createEarth();
-		// 	scene.add(earthMesh);
-		// 	var mesh = THREEx.Planets.createEarthCloud();
-		// 	scene.add(mesh);
-		// 	updateFcts.push(function(delta, now) {
-		// 		mesh.rotation.y += 1 / 8 * delta;
-		// 	});
-		// }
-		//
-		// function renderMars() {
-		// 	var mesh = THREEx.Planets.createMars();
-		// 	scene.add(mesh);
-		// };
-		//
-		// function renderJupiter() {
-		// 	var mesh = THREEx.Planets.createJupiter();
-		// 	scene.add(mesh);
-		// };
-		//
-		// function renderSaturn() {
-		// 	var mesh = THREEx.Planets.createSaturn();
-		// 	mesh.receiveShadow = true;
-		// 	mesh.castShadow = true;
-		// 	scene.add(mesh);
-		// 	var mesh = THREEx.Planets.createSaturnRing();
-		// 	mesh.receiveShadow = true;
-		// 	mesh.castShadow = true;
-		// 	scene.add(mesh);
-		// };
-		//
-		//
-		// function renderUranus() {
-		// 	var mesh = THREEx.Planets.createUranus();
-		// 	mesh.receiveShadow = true;
-		// 	mesh.castShadow = true;
-		// 	scene.add(mesh);
-		// 	var mesh = THREEx.Planets.createUranusRing();
-		// 	mesh.receiveShadow = true;
-		// 	mesh.castShadow = true;
-		// 	scene.add(mesh);
-		// };
-		//
+
+		function renderEarth() {
+			var mesh = THREEx.Planets.createMoon();
+			scene.add(mesh);
+			var earthMesh = THREEx.Planets.createEarth();
+			scene.add(earthMesh);
+			var mesh = THREEx.Planets.createEarthCloud();
+			scene.add(mesh);
+			updateFcts.push(function(delta, now) {
+				mesh.rotation.y += 1 / 8 * delta;
+			});
+		}
+
+		function renderMars() {
+			var mesh = THREEx.Planets.createMars();
+			scene.add(mesh);
+		};
+
+		function renderJupiter() {
+			var mesh = THREEx.Planets.createJupiter();
+			scene.add(mesh);
+		};
+
+		function renderSaturn() {
+			var mesh = THREEx.Planets.createSaturn();
+			mesh.receiveShadow = true;
+			mesh.castShadow = true;
+			scene.add(mesh);
+			var mesh = THREEx.Planets.createSaturnRing();
+			mesh.receiveShadow = true;
+			mesh.castShadow = true;
+			scene.add(mesh);
+		};
+
+
+		function renderUranus() {
+			var mesh = THREEx.Planets.createUranus();
+			mesh.receiveShadow = true;
+			mesh.castShadow = true;
+			scene.add(mesh);
+			var mesh = THREEx.Planets.createUranusRing();
+			mesh.receiveShadow = true;
+			mesh.castShadow = true;
+			scene.add(mesh);
+		};
+
 		function renderNeptune() {
 			var mesh = THREEx.Planets.createNeptune();
 			scene.add(mesh);
@@ -126,12 +126,12 @@
 			1: renderSun,
 			2: renderMercury,
 			3: renderVenus,
-			// 4: renderEarth,
-			// 5: renderMars,
-			// 6: renderJupiter,
-			// 7: renderSaturn,
-			// 8: renderUranus,
-			// 9: renderNeptune,
+			4: renderEarth,
+			5: renderMars,
+			6: renderJupiter,
+			7: renderSaturn,
+			8: renderUranus,
+			9: renderNeptune,
 			10: renderPluto
 		};
 
