@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<script src='vendor/three.js/build/three.min.js'></script>
-<script src='../threex.planets.js'></script>
+<script src='bower_components/threex.planets/examples/vendor/three.js/build/three.min.js'></script>
+<script src='bower_components/threex.planets/threex.planets.js'></script>
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'><script>
 	var renderer	= new THREE.WebGLRenderer({
 		antialias	: true
@@ -8,7 +8,7 @@
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	document.body.appendChild( renderer.domElement );
 	renderer.shadowMapEnabled	= true
-	
+
 	var updateFcts	= [];
 	var scene	= new THREE.Scene();
 	var camera	= new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100 );
@@ -57,7 +57,7 @@
 	var mesh	= THREEx.Planets.createEarthCloud()
 	scene.add(mesh)
 	updateFcts.push(function(delta, now){
-		mesh.rotation.y += 1/8 * delta;		
+		mesh.rotation.y += 1/8 * delta;
 	})
 	// var mesh	= THREEx.Planets.createMars()
 	// scene.add(mesh)
@@ -83,12 +83,12 @@
 	// scene.add(mesh)
 	// var mesh	= THREEx.Planets.createPluto()
 	// scene.add(mesh)
-	
+
 	updateFcts.push(function(delta, now){
 		//mesh.rotation.x += 1 * delta;
-		//mesh.rotation.y += 1/2 * delta;		
+		//mesh.rotation.y += 1/2 * delta;
 	})
-	
+
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Camera Controls							//
 	//////////////////////////////////////////////////////////////////////////////////
@@ -108,9 +108,9 @@
 	//		render the scene						//
 	//////////////////////////////////////////////////////////////////////////////////
 	updateFcts.push(function(){
-		renderer.render( scene, camera );		
+		renderer.render( scene, camera );
 	})
-	
+
 	//////////////////////////////////////////////////////////////////////////////////
 	//		loop runner							//
 	//////////////////////////////////////////////////////////////////////////////////
