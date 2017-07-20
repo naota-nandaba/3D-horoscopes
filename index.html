@@ -51,11 +51,11 @@
 		//		add an object and make it move					//
 		//////////////////////////////////////////////////////////////////////////////////
 
-		// function renderSun() {
-		// 	var mesh = THREEx.Planets.createSun();
-		// 	scene.add(mesh);
-		// };
-		//
+		function renderSun() {
+			var mesh = THREEx.Planets.createSun();
+			scene.add(mesh);
+		};
+
 		// function renderMercury() {
 		// 	var mesh = THREEx.Planets.createMercury();
 		// 	scene.add(mesh);
@@ -124,14 +124,14 @@
 
 		var randomPlanet = {
 			1: renderSun(),
-			2: renderMercury(),
-			3: renderVenus(),
-			4: renderEarth(),
-			5: renderMars(),
-			6: renderJupiter(),
-			7: renderSaturn(),
-			8: renderUranus(),
-			9: renderNeptune(),
+			// 2: renderMercury(),
+			// 3: renderVenus(),
+			// 4: renderEarth(),
+			// 5: renderMars(),
+			// 6: renderJupiter(),
+			// 7: renderSaturn(),
+			// 8: renderUranus(),
+			// 9: renderNeptune(),
 			10: renderPluto()
 		};
 		//
@@ -139,7 +139,7 @@
 		//
 		//
 
-		randomPlanet[9];
+		randomPlanet[1];
 
 
 		updateFcts.push(function(delta, now) {
