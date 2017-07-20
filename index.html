@@ -56,10 +56,10 @@
 			scene.add(mesh);
 		};
 
-		// function renderMercury() {
-		// 	var mesh = THREEx.Planets.createMercury();
-		// 	scene.add(mesh);
-		// };
+		function renderMercury() {
+			var mesh = THREEx.Planets.createMercury();
+			scene.add(mesh);
+		};
 		//
 		// function renderVenus() {
 		// 	var mesh = THREEx.Planets.createVenus();
@@ -124,7 +124,7 @@
 
 		var randomPlanet = {
 			1: renderSun(),
-			// 2: renderMercury(),
+			2: renderMercury(),
 			// 3: renderVenus(),
 			// 4: renderEarth(),
 			// 5: renderMars(),
@@ -134,12 +134,11 @@
 			// 9: renderNeptune(),
 			10: renderPluto()
 		};
-		//
-		var random = Math.floor((Math.random() * 10) + 1);
-		//
-		//
 
-		randomPlanet[1];
+		var random = Math.floor((Math.random() * 10) + 1);
+
+		console.log(random);
+		randomPlanet[2];
 
 
 		updateFcts.push(function(delta, now) {
