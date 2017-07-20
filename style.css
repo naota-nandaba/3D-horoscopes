@@ -9,6 +9,7 @@ body {
 }
 
 #menu{
+  padding: 15px;
   z-index: 10000;
   visibility: visible;
   width: 25%;
