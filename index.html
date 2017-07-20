@@ -16,15 +16,31 @@
 
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'>
 
-<!-- <div class="container-fluid">
-	<div class="row-fluid"> -->
-	<p id="instructions">
-			'1' '2' '3' '4' toggle visualizers <br>
-			'R' 'G' 'B' toggle colors <br>
-			'A' toggles animation <br>
-			'SPACE' toggles playback <br>
-			'h' toggles extra controls <br>
-	</p>
+<div class="container-fluid">
+	<div class="row-fluid">
+
+		<form id="menu">
+			<div class="btn-group">
+				<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Select Your Star Sign
+				</button>
+				<div class="dropdown-menu">
+					<a class="instructions" id="aries" href="#">Aries (3/20 - 4/19)</a>
+					<a class="instructions" id="taurus" href="#">Taurus (4/20 - 5/21)</a>
+					<a class="instructions" id="gemini" href="#">Gemini (5/22 - 6/21)</a>
+					<a class="instructions" id="cancer" href="#">Cancer (6/22 - 7/22)</a>
+					<a class="instructions" id="leo" href="#">Leo (7/23 - 8/22)</a>
+					<a class="instructions" id="virgo" href="#">Virgo (8/23 - 9/22)</a>
+					<a class="instructions" id="libra" href="#">Libra (9/23 - 10/22)</a>
+					<a class="instructions" id="scorpio" href="#">Scorpio (10/23 - 11/22)</a>
+					<a class="instructions" id="sagittarius" href="#">Sagittarius (11/23 - 12/21)</a>
+					<a class="instructions" id="capricorn" href="#">Capricorn (12/22 - 1/20)</a>
+					<a class="instructions" id="aquarius" href="#">Aquarius (1/21 - 2/19)</a>
+					<a class="instructions" id="pisces" href="#">Pisces (2/20 - 3/19)</a>
+				</div>
+			</div>
+		</form>
+
 
 	<script>
 		var renderer = new THREE.WebGLRenderer({
@@ -210,8 +226,8 @@
 			})
 		})
 	</script>
-	<!-- </div>
-	</div> -->
+	</div>
+	</div>
 
 <!-- BOOTSTRAP -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
