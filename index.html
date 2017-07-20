@@ -2,11 +2,13 @@
 <html>
 
 <head>
+	<link rel='stylesheet' href='style.css' />
 	<script src='bower_components/threex.planets/examples/vendor/three.js/build/three.min.js'></script>
 	<script src='bower_components/threex.planets/threex.planets.js'></script>
 </head>
 
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'>
+
 	<script>
 		var renderer = new THREE.WebGLRenderer({
 			antialias: true
@@ -191,6 +193,15 @@
 			})
 		})
 	</script>
+
+	<p id="instructions">
+	    '1' '2' '3' '4' toggle visualizers <br>
+	    'R' 'G' 'B' toggle colors <br>
+	    'A' toggles animation <br>
+	    'SPACE' toggles playback <br>
+	    'h' toggles extra controls <br>
+	</p>
+
 </body>
 
 </html>
