@@ -9,6 +9,14 @@
 
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'>
 
+	<p id="instructions">
+			'1' '2' '3' '4' toggle visualizers <br>
+			'R' 'G' 'B' toggle colors <br>
+			'A' toggles animation <br>
+			'SPACE' toggles playback <br>
+			'h' toggles extra controls <br>
+	</p>
+
 	<script>
 		var renderer = new THREE.WebGLRenderer({
 			antialias: true
@@ -140,8 +148,8 @@
 		var random = Math.floor((Math.random() * 10) + 1);
 		console.log(random);
 
-		var mesh = THREEx.Planets.createStarfield();
-		scene.add(mesh);
+		// var mesh = THREEx.Planets.createStarfield();
+		// scene.add(mesh);
 
 		randomPlanet[random]();
 
@@ -193,14 +201,6 @@
 			})
 		})
 	</script>
-
-	<p id="instructions">
-	    '1' '2' '3' '4' toggle visualizers <br>
-	    'R' 'G' 'B' toggle colors <br>
-	    'A' toggles animation <br>
-	    'SPACE' toggles playback <br>
-	    'h' toggles extra controls <br>
-	</p>
 
 </body>
 
