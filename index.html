@@ -133,6 +133,9 @@
 
 		var random = Math.floor((Math.random() * 10) + 1);
 
+		var mesh = THREEx.Planets.createStarfield();
+		scene.add(mesh);
+
 		randomPlanet[random];
 
 		updateFcts.push(function(delta, now) {
