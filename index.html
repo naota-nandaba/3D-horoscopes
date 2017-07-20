@@ -5,10 +5,19 @@
 	<link rel='stylesheet' href='style.css' />
 	<script src='bower_components/threex.planets/examples/vendor/three.js/build/three.min.js'></script>
 	<script src='bower_components/threex.planets/threex.planets.js'></script>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+
+	<script src="app.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
 
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'>
 
+<div class="container-fluid">
+	<div class="row-fluid">
 	<p id="instructions">
 			'1' '2' '3' '4' toggle visualizers <br>
 			'R' 'G' 'B' toggle colors <br>
@@ -16,6 +25,8 @@
 			'SPACE' toggles playback <br>
 			'h' toggles extra controls <br>
 	</p>
+</div>
+</div>
 
 	<script>
 		var renderer = new THREE.WebGLRenderer({
@@ -202,6 +213,9 @@
 		})
 	</script>
 
+<!-- BOOTSTRAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 
 </html>
