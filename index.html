@@ -123,22 +123,22 @@
 		};
 
 		var randomPlanet = {
-			1: renderSun(),
-			2: renderMercury(),
-			// 3: renderVenus(),
-			// 4: renderEarth(),
-			// 5: renderMars(),
-			// 6: renderJupiter(),
-			// 7: renderSaturn(),
-			// 8: renderUranus(),
-			// 9: renderNeptune(),
-			10: renderPluto()
+			1: renderSun,
+			2: renderMercury,
+			// 3: renderVenus,
+			// 4: renderEarth,
+			// 5: renderMars,
+			// 6: renderJupiter,
+			// 7: renderSaturn,
+			// 8: renderUranus,
+			// 9: renderNeptune,
+			10: renderPluto
 		};
 
 		var random = Math.floor((Math.random() * 10) + 1);
 
 		console.log(random);
-		randomPlanet[2];
+		randomPlanet[2]();
 
 
 		updateFcts.push(function(delta, now) {
