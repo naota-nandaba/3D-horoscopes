@@ -8,7 +8,7 @@ body {
   color: white;
 }
 
-menu{
+#menu{
   z-index: 10000;
   visibility: visible;
   width: 25%;
