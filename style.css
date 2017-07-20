@@ -19,6 +19,7 @@ body {
   font-weight: 100;
   position: absolute;
   font-size:0.75rem;
+  background-color: black;
 }
 
 button{
@@ -62,4 +63,5 @@ a:hover{
   /*position: absolute;*/
   font-size:0.75rem;
   background-color: black;
+  border: 1px solid white;
 }
