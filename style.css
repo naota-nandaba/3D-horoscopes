@@ -38,6 +38,13 @@ button{
   background-color: black;
 }
 
+.btn-group{
+  background-color: black;
+}
+
+a:hover{
+  color: #ffff66;
+}
 .instructions{
   z-index: 10000;
   visibility: visible;
