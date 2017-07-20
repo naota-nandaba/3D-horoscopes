@@ -45,6 +45,11 @@ button{
 a:hover{
   color: #ffff66;
 }
+
+.instructions:hover{
+  color: #ffff66;
+}
+
 .instructions{
   z-index: 10000;
   visibility: visible;
