@@ -60,11 +60,11 @@
 			var mesh = THREEx.Planets.createMercury();
 			scene.add(mesh);
 		};
-		//
-		// function renderVenus() {
-		// 	var mesh = THREEx.Planets.createVenus();
-		// 	scene.add(mesh);
-		// };
+
+		function renderVenus() {
+			var mesh = THREEx.Planets.createVenus();
+			scene.add(mesh);
+		};
 		//
 		// function renderEarth() {
 		// 	var mesh = THREEx.Planets.createMoon();
@@ -125,7 +125,7 @@
 		var randomPlanet = {
 			1: renderSun,
 			2: renderMercury,
-			// 3: renderVenus,
+			3: renderVenus,
 			// 4: renderEarth,
 			// 5: renderMars,
 			// 6: renderJupiter,
@@ -138,7 +138,7 @@
 		var random = Math.floor((Math.random() * 10) + 1);
 
 		console.log(random);
-		randomPlanet[2]();
+		randomPlanet[3]();
 
 
 		updateFcts.push(function(delta, now) {
