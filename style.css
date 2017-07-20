@@ -23,6 +23,7 @@ body {
 }
 
 button{
+  padding: 10px;
   z-index: 10000;
   visibility: visible;
   /*width: 25%;*/
