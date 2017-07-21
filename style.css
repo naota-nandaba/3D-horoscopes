@@ -13,10 +13,8 @@ body {
   z-index: 10000;
   visibility: visible;
   width: 25%;
-  /*text-align: left;*/
   letter-spacing: 0.15rem;
   color: #fff;
-  /*margin: 1%;*/
   font-weight: 100;
   position: absolute;
   font-size:0.75rem;
@@ -27,7 +25,6 @@ button{
   padding: 10px;
   z-index: 10000;
   visibility: visible;
-  /*width: 25%;*/
   text-align: left;
   letter-spacing: 0.15rem;
   color: #fff;
@@ -45,14 +42,6 @@ button{
   background-color: black;
 }
 
-a:hover{
-  color: #ffff66;
-}
-
-.instructions:hover{
-  color: #ffff66;
-}
-
 .menu-item{
   z-index: 10000;
   visibility: visible;
@@ -67,18 +56,12 @@ a:hover{
   background-color: black;
 }
 
-.instructions{
-  z-index: 10000;
-  visibility: visible;
-  /*width: 25%;*/
-  /*text-align: left;*/
-  letter-spacing: 0.15rem;
-  color: #fff;
-  /*margin: 1%;*/
-  font-weight: 100;
-  /*position: absolute;*/
-  font-size:0.7rem;
-  background-color: black;
+a:hover{
+  color: #ffff66;
+}
+
+.menu-item:hover{
+  color: #ffff66;
 }
 
 p{
@@ -95,30 +78,6 @@ p{
   /*border: 1px solid white;*/
 }
 
-.col-md-4{
-  z-index: 10000;
-  visibility: visible;
-  /*width: 25%;*/
-  text-align: left;
-  letter-spacing: 0.15rem;
-  color: #fff;
-  /*margin: 1%;*/
-  font-weight: 100;
-  /*position: absolute;*/
-  font-size:0.75rem;
-  border: 1px solid white;
-}
-
-#footer{
-  z-index: 10000;
-  visibility: visible;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
 #planet-info{
   z-index: 10000;
   visibility: visible;
@@ -129,4 +88,28 @@ p{
   text-align: center;
   font-size:0.65rem;
   border: 1px solid white;
+}
+
+.instructions{
+  z-index: 10000;
+  visibility: visible;
+  letter-spacing: 0.15rem;
+  color: #fff;
+  font-weight: 100;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 10px;
+  font-size:0.7rem;
+  background-color: black;
+}
+
+#footer{
+  z-index: 10000;
+  visibility: visible;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
