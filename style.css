@@ -84,6 +84,7 @@ p{
 
 .col-md-4{
   z-index: 10000;
+  padding-top: 50px;
   visibility: visible;
   /*width: 25%;*/
   text-align: left;
@@ -93,5 +94,6 @@ p{
   font-weight: 100;
   /*position: absolute;*/
   font-size:0.75rem;
+  opacity: 0.5;
   border: 1px solid white;
 }
