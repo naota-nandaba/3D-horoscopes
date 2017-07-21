@@ -96,22 +96,12 @@ p{
   border: 1px solid white;
 }
 
-#results{
+#footer{
+  z-index: 10000;
+  visibility: visible;
   position: absolute;
   right: 0;
-  bottom: -200px;
+  bottom: 0;
   left: 0;
   text-align: center;
-}
-
-.retro-row{
-
-}
-
-.ganesha-row{
-
-}
-
-.aztro-row{
-
 }
