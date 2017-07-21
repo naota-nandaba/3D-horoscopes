@@ -101,7 +101,7 @@
 				"You are looking at the Sun."
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createSun();
 			scene.add(mesh);
 		};
@@ -116,7 +116,7 @@
 				"IV. Dec 3 - Dec 23"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createMercury();
 			scene.add(mesh);
 		};
@@ -127,7 +127,7 @@
 				"Venus will be retrograde Mar 5 - Apr 16"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createVenus();
 			scene.add(mesh);
 		};
@@ -137,7 +137,7 @@
 				"You are looking at the Moon."
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createMoon();
 			scene.add(mesh);
 		};
@@ -147,7 +147,7 @@
 				"You are looking at planet Mars."
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createMars();
 			scene.add(mesh);
 		};
@@ -158,7 +158,7 @@
 				"Jupiter will be retrograde Feb 7 - Jun 10"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createJupiter();
 			scene.add(mesh);
 		};
@@ -169,7 +169,7 @@
 				"Saturn will be retrograde Apr 6 - Aug 26."
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createSaturn();
 			mesh.receiveShadow = true;
 			mesh.castShadow = true;
@@ -187,7 +187,7 @@
 				"Uranus will be retrograde Aug 4 - Jan 3 (2018)"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createUranus();
 			mesh.receiveShadow = true;
 			mesh.castShadow = true;
@@ -204,7 +204,7 @@
 				"Neptune will be retrograde Jun 17 - Nov 23"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createNeptune();
 			scene.add(mesh);
 		};
@@ -213,10 +213,10 @@
 		function renderPluto() {
 			var template = _.template(
 				"You are looking at Pluto." + "<br>" +
-				"Pluto will be retrograde Apr 21 - Sept 29" 
+				"Pluto will be retrograde Apr 21 - Sept 29"
 			)
 			//append
-			$("#planet-info").append(template(result));
+			$("#planet-info").append(template);
 			var mesh = THREEx.Planets.createPluto();
 			scene.add(mesh);
 		};
