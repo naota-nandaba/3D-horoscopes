@@ -130,6 +130,7 @@ p{
   text-align: center;
   font-size:0.65rem;
   border: 1px solid white;
+  max-width: 250px;
 }
 
 
