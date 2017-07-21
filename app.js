@@ -21,7 +21,7 @@ function app() {
     function renderAztro(result) {
 
       var template = _.template(
-        "<b>" + "<u>" + "kudosmedia:" + " " + "</u>" + "</b>" + "<i>" + "<%= description %>" + "</i>" + "          "
+        "<b>" + "<u>" + "kudosmedia:" + "</u>" + "</b>" +  " " + "<i>" + "<%= description %>" + "</i>" + "          "
       )
       //append
       $("#results").append(template(result));
@@ -40,7 +40,7 @@ function app() {
     //RENDER GANESHA RESULTS
     function renderGanesha(result) {
       var template = _.template(
-        "<b>" + "<u>" + "GaneshaSpeaks:" + " " + "</u>" + "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "          "
+        "<b>" + "<u>" + "GaneshaSpeaks:" + "</u>" + "</b>" + " " + "<i>" + "<%= horoscope %>" + "</i>" + "          "
       )
       //append
       result.horoscope = result.horoscope.replace(/\['|'\]|\\r\\n/g, '');
