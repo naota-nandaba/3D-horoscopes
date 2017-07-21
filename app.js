@@ -60,7 +60,7 @@ function app() {
         "<p id='aztro-head'>" + "kudosmedia" + "</p>" +
         "<p id='aztro-horo'>" + "<i>" + "<%= description %>" + "</i>" + "</p>" +
         "</div>" +
-        "</div>" + // <div row>
+        "</div>"// <div row>
       )
       //append to results div
       $("#results").append(template(result));
@@ -89,7 +89,7 @@ function app() {
         "<p id='ganesha-head'>" + "GaneshaSpeaks" + "</p>" +
         "<p id='ganesha-horo'>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>" +
         "</div>" +
-        "</div>" + // <div row>
+        "</div>" // <div row>
       )
       //append to results div
       result.horoscope = result.horoscope.replace(/\['|'\]|\\r\\n/g, '');
@@ -106,7 +106,7 @@ function app() {
         "<%= is_retrograde ? 'Yes!' : 'No!' %>" +
         "</i>" + "</p>" +
         "</div>" +
-        "</div>" + // <div row>
+        "</div>" // <div row>
       )
       //append to results div
       $("#results").append(template(result))
