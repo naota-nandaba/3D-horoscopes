@@ -16,30 +16,38 @@
 
 <body style='margin: 0px; background-color: #000000; overflow: hidden;'>
 
-<div class="container">
-	<div class="row">
+	<div class="container">
+		<div class="row">
 
-		<form id="menu">
-			<div class="btn-group">
-				<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<form id="menu">
+				<div class="btn-group">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Select Your Star Sign
 				</button>
-				<div class="dropdown-menu">
-					<a class="instructions" id="aries" href="#">Aries (3/20 - 4/19)</a> <br>
-					<a class="instructions" id="taurus" href="#">Taurus (4/20 - 5/21)</a> <br>
-					<a class="instructions" id="gemini" href="#">Gemini (5/22 - 6/21)</a> <br>
-					<a class="instructions" id="cancer" href="#">Cancer (6/22 - 7/22)</a> <br>
-					<a class="instructions" id="leo" href="#">Leo (7/23 - 8/22)</a> <br>
-					<a class="instructions" id="virgo" href="#">Virgo (8/23 - 9/22)</a> <br>
-					<a class="instructions" id="libra" href="#">Libra (9/23 - 10/22)</a> <br>
-					<a class="instructions" id="scorpio" href="#">Scorpio (10/23 - 11/22)</a> <br>
-					<a class="instructions" id="sagittarius" href="#">Sagittarius (11/23 - 12/21)</a> <br>
-					<a class="instructions" id="capricorn" href="#">Capricorn (12/22 - 1/20)</a> <br>
-					<a class="instructions" id="aquarius" href="#">Aquarius (1/21 - 2/19)</a> <br>
-					<a class="instructions" id="pisces" href="#">Pisces (2/20 - 3/19)</a> <br>
+					<div class="dropdown-menu">
+						<a class="instructions" id="aries" href="#">Aries (3/20 - 4/19)</a> <br>
+						<a class="instructions" id="taurus" href="#">Taurus (4/20 - 5/21)</a> <br>
+						<a class="instructions" id="gemini" href="#">Gemini (5/22 - 6/21)</a> <br>
+						<a class="instructions" id="cancer" href="#">Cancer (6/22 - 7/22)</a> <br>
+						<a class="instructions" id="leo" href="#">Leo (7/23 - 8/22)</a> <br>
+						<a class="instructions" id="virgo" href="#">Virgo (8/23 - 9/22)</a> <br>
+						<a class="instructions" id="libra" href="#">Libra (9/23 - 10/22)</a> <br>
+						<a class="instructions" id="scorpio" href="#">Scorpio (10/23 - 11/22)</a> <br>
+						<a class="instructions" id="sagittarius" href="#">Sagittarius (11/23 - 12/21)</a> <br>
+						<a class="instructions" id="capricorn" href="#">Capricorn (12/22 - 1/20)</a> <br>
+						<a class="instructions" id="aquarius" href="#">Aquarius (1/21 - 2/19)</a> <br>
+						<a class="instructions" id="pisces" href="#">Pisces (2/20 - 3/19)</a> <br>
+					</div>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
+	</div>
+
+	<p id="planet-info">
+		You are looking at
+	<p>
+
+
 
 	<script>
 		var renderer = new THREE.WebGLRenderer({
@@ -100,17 +108,10 @@
 			scene.add(mesh);
 		};
 
-		function renderEarth() {
+		function renderMoon() {
 			var mesh = THREEx.Planets.createMoon();
 			scene.add(mesh);
-			var earthMesh = THREEx.Planets.createEarth();
-			scene.add(earthMesh);
-			var mesh = THREEx.Planets.createEarthCloud();
-			scene.add(mesh);
-			updateFcts.push(function(delta, now) {
-				mesh.rotation.y += 1 / 8 * delta;
-			});
-		}
+		};
 
 		function renderMars() {
 			var mesh = THREEx.Planets.createMars();
@@ -160,7 +161,7 @@
 			1: renderSun,
 			2: renderMercury,
 			3: renderVenus,
-			4: renderEarth,
+			4: renderMoon,
 			5: renderMars,
 			6: renderJupiter,
 			7: renderSaturn,
@@ -225,19 +226,17 @@
 			})
 		})
 	</script>
-	</div>
-	</div>
 
 	<section id="footer">
 		<marquee>
 			<section id="horoscopes">
-			<p id="results">
+				<p id="results">
 			</section>
 		</marquee>
 	</section>
-<!-- BOOTSTRAP -->
+	<!-- BOOTSTRAP -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 
 </html>
