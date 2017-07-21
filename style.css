@@ -76,6 +76,15 @@ a:hover{
   color: #ffff66;
 }
 
+#github{
+  z-index: 10000;
+  visibility: visible;
+  letter-spacing: 0.15rem;
+  color: #fff;
+  font-weight: 100;
+  font-size:0.75rem;
+}
+
 p{
   z-index: 10000;
   visibility: visible;
