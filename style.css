@@ -67,3 +67,18 @@ a:hover{
   background-color: black;
   border: 1px solid black;
 }
+
+p{
+  z-index: 10000;
+  visibility: visible;
+  /*width: 25%;*/
+  /*text-align: left;*/
+  letter-spacing: 0.15rem;
+  color: #fff;
+  /*margin: 1%;*/
+  font-weight: 100;
+  /*position: absolute;*/
+  font-size:0.75rem;
+  background-color: black;
+  border: 1px solid black;
+}
