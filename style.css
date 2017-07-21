@@ -53,7 +53,7 @@ a:hover{
   color: #ffff66;
 }
 
-.instructions{
+.menu-item{
   z-index: 10000;
   visibility: visible;
   /*width: 25%;*/
@@ -65,7 +65,20 @@ a:hover{
   /*position: absolute;*/
   font-size:0.75rem;
   background-color: black;
-  border: 1px solid black;
+}
+
+.instructions{
+  z-index: 10000;
+  visibility: visible;
+  /*width: 25%;*/
+  /*text-align: left;*/
+  letter-spacing: 0.15rem;
+  color: #fff;
+  /*margin: 1%;*/
+  font-weight: 100;
+  /*position: absolute;*/
+  font-size:0.7rem;
+  background-color: black;
 }
 
 p{
@@ -114,6 +127,6 @@ p{
   top: 140px;
   padding: 15px;
   text-align: center;
-  font-size:0.5rem;
+  font-size:0.65rem;
   border: 1px solid white;
 }
