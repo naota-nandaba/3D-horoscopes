@@ -99,6 +99,7 @@ function app() {
 
     //RENDER RETROGRADE RESULTS
     function renderRetrograde(result) {
+      var template = _.template(
         "<div class='row retro-row'>" +
         "<div class='col-md-4 box retro-content'>" +
         "<p id='retro-head'>" + "Is Mercury retrograde?" + "</p>" +
