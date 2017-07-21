@@ -45,37 +45,39 @@ button{
 .menu-item{
   z-index: 10000;
   visibility: visible;
-  /*width: 25%;*/
-  /*text-align: left;*/
   letter-spacing: 0.15rem;
   color: #fff;
-  /*margin: 1%;*/
   font-weight: 100;
-  /*position: absolute;*/
   font-size:0.75rem;
   background-color: black;
-}
-
-a:hover{
-  color: #ffff66;
 }
 
 .menu-item:hover{
   color: #ffff66;
 }
 
+a:hover{
+  color: #ffff66;
+}
+
+#about{
+  z-index: 10000;
+  visibility: visible;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  text-align: center;
+  font-size:0.65rem;
+}
+
 p{
   z-index: 10000;
   visibility: visible;
-  /*width: 25%;*/
-  /*text-align: left;*/
   letter-spacing: 0.15rem;
   color: #fff;
-  /*margin: 1%;*/
   font-weight: 100;
-  /*position: absolute;*/
   font-size:0.75rem;
-  /*border: 1px solid white;*/
 }
 
 #planet-info{
@@ -97,7 +99,7 @@ p{
   color: #fff;
   font-weight: 100;
   position: absolute;
-  right: 30px;
+  right: 28px;
   top: 30px;
   padding: 10px;
   font-size:0.7rem;
