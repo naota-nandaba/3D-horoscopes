@@ -110,7 +110,7 @@ p{
   z-index: 10000;
   visibility: visible;
   position: absolute;
-  right: 0;
+  right: 20px;
   text-align: center;
   border: 1px solid white;
 }
