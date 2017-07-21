@@ -21,7 +21,7 @@ function app() {
     function renderAztro(result) {
 
       var template = _.template(
-        "<p id='aztro-text'>" + "<b>" + "kudosmedia:" + "<b>" + "<i>" + "<%= description %>" + "</i>" + "</p>"
+        "<b>" + "<u>" + "kudosmedia:" + " " + "</u>" + "</b>" + "<i>" + "<%= description %>" + "</i>" + "</p>"
       )
       //append to results div
       $("#results").append(template(result));
@@ -40,7 +40,7 @@ function app() {
     //RENDER GANESHA RESULTS
     function renderGanesha(result) {
       var template = _.template(
-        "<p id='ganesha-text'>" + "<b>" + "GaneshaSpeaks:" +  "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>"
+        "<b>" + "<u>" + "GaneshaSpeaks:" + " " + "</u>" + "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>"
       )
       //append to results div
       result.horoscope = result.horoscope.replace(/\['|'\]|\\r\\n/g, '');
@@ -51,7 +51,7 @@ function app() {
     //RENDER RETROGRADE RESULTS
     function renderRetrograde(result) {
       var template = _.template(
-        "<p id='retro-text'>" + "<b>" + "Is Mercury retrograde?" + "</b>" + " " + "<i>" +
+        "<b>" + "<u>" + "Is Mercury retrograde?" + "</u>" + "</b>" + " " + "<i>" +
         "<%= is_retrograde ? 'Yes!' : 'No!' %>" +
         "</i>" + "</p>"
       )
