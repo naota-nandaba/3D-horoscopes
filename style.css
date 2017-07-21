@@ -81,8 +81,17 @@ a:hover{
   visibility: visible;
   letter-spacing: 0.15rem;
   color: #fff;
-  font-weight: 100;
-  font-size:0.75rem;
+  color: #1E8BC3;
+  font-weight: 500;
+  font-size:0.7rem;
+}
+
+#github:hover{
+  color: #ffff66;
+}
+
+img{
+  padding: 5px;
 }
 
 p{
@@ -130,7 +139,7 @@ p{
   text-align: center;
   font-size:0.65rem;
   border: 1px solid white;
-  max-width: 250px;
+  max-width: 275px;
 }
 
 
