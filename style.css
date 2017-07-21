@@ -64,7 +64,7 @@ a:hover{
   z-index: 10000;
   visibility: visible;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 0;
   padding: 5px;
   text-align: center;
@@ -104,7 +104,7 @@ p{
   color: #fff;
   font-weight: 100;
   position: absolute;
-  right: 70px;
+  right: 80px;
   top: 0;
   padding: 5px;
   font-size:0.7rem;
