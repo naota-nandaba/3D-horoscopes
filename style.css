@@ -68,7 +68,12 @@ a:hover{
   top: 0;
   padding: 5px;
   text-align: center;
+  color: #1E8BC3;
   font-size:0.65rem;
+}
+
+#about:hover{
+  color: #ffff66;
 }
 
 p{
@@ -99,12 +104,25 @@ p{
   color: #fff;
   font-weight: 100;
   position: absolute;
-  right: 50px;
+  right: 70px;
   top: 0;
-  padding: 10px;
+  padding: 5px;
   font-size:0.7rem;
   background-color: black;
 }
+
+#about-info{
+  z-index: 10000;
+  visibility: visible;
+  position: absolute;
+  right: 120px;
+  top: 140px;
+  padding: 15px;
+  text-align: center;
+  font-size:0.65rem;
+  border: 1px solid white;
+}
+
 
 #footer{
   z-index: 10000;

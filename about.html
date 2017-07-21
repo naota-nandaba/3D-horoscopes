@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel='stylesheet' href='style.css' />
+	<script src='bower_components/threex.planets/examples/vendor/three.js/build/three.min.js'></script>
+	<script src='bower_components/threex.planets/threex.planets.js'></script>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+
+	<script src="app.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+
+<body style='margin: 0px; background-color: #000000; overflow: hidden;'>
+
+	<a id="about" href="index.html">Back</a>
+
+	<p id="about-info">
+	</p>
+
+	<script>
+		var renderer = new THREE.WebGLRenderer({
+			antialias: true
+		});
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		renderer.shadowMapEnabled = true
+
+		var updateFcts = [];
+		var scene = new THREE.Scene();
+		var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 100);
+		camera.position.z = 3;
+
+		var light = new THREE.AmbientLight(0x888888)
+		scene.add(light)
+		// var light	= new THREE.DirectionalLight( 'white', 1)
+		// light.position.set(5,5,5)
+		// light.target.position.set( 0, 0, 0 )
+		// scene.add( light )
+
+		var light = new THREE.DirectionalLight(0xcccccc, 1)
+		light.position.set(5, 5, 5)
+		scene.add(light)
+		light.castShadow = true
+		light.shadowCameraNear = 0.01
+		light.shadowCameraFar = 15
+		light.shadowCameraFov = 45
+
+		light.shadowCameraLeft = -1
+		light.shadowCameraRight = 1
+		light.shadowCameraTop = 1
+		light.shadowCameraBottom = -1
+		// light.shadowCameraVisible	= true
+
+		light.shadowBias = 0.001
+		light.shadowDarkness = 0.2
+
+		light.shadowMapWidth = 1024
+		light.shadowMapHeight = 1024
+
+		//////////////////////////////////////////////////////////////////////////////////
+		//		add an object and make it move					//
+		//////////////////////////////////////////////////////////////////////////////////
+    function renderEarth() {
+      var earthMesh = THREEx.Planets.createEarth();
+      scene.add(earthMesh);
+      var mesh = THREEx.Planets.createEarthCloud();
+      scene.add(mesh);
+      updateFcts.push(function(delta, now) {
+          mesh.rotation.y += 1 / 8 * delta;
+        }
+      });
+
+		var mesh = THREEx.Planets.createStarfield();
+		scene.add(mesh);
+
+		renderEarth()
+
+
+		updateFcts.push(function(delta, now) {
+			//mesh.rotation.x += 1 * delta;
+			//mesh.rotation.y += 1/2 * delta;
+		})
+
+		//////////////////////////////////////////////////////////////////////////////////
+		//		Camera Controls							//
+		//////////////////////////////////////////////////////////////////////////////////
+		var mouse = {
+			x: 0,
+			y: 0
+		}
+		document.addEventListener('mousemove', function(event) {
+			mouse.x = (event.clientX / window.innerWidth) - 0.5
+			mouse.y = (event.clientY / window.innerHeight) - 0.5
+		}, false)
+		updateFcts.push(function(delta, now) {
+			camera.position.x += (mouse.x * 5 - camera.position.x) * (delta * 3)
+			camera.position.y += (mouse.y * 5 - camera.position.y) * (delta * 3)
+			camera.lookAt(scene.position)
+		})
+
+
+		//////////////////////////////////////////////////////////////////////////////////
+		//		render the scene						//
+		//////////////////////////////////////////////////////////////////////////////////
+		updateFcts.push(function() {
+			renderer.render(scene, camera);
+		})
+
+		//////////////////////////////////////////////////////////////////////////////////
+		//		loop runner							//
+		//////////////////////////////////////////////////////////////////////////////////
+		var lastTimeMsec = null
+		requestAnimationFrame(function animate(nowMsec) {
+			// keep looping
+			requestAnimationFrame(animate);
+			// measure time
+			lastTimeMsec = lastTimeMsec || nowMsec - 1000 / 60
+			var deltaMsec = Math.min(200, nowMsec - lastTimeMsec)
+			lastTimeMsec = nowMsec
+			// call each update function
+			updateFcts.forEach(function(updateFn) {
+				updateFn(deltaMsec / 1000, nowMsec / 1000)
+			})
+		})
+	</script>
+
+	<section id="footer">
+		<marquee>
+			<section id="horoscopes">
+				<p id="results">
+			</section>
+		</marquee>
+	</section>
+	<!-- BOOTSTRAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>
