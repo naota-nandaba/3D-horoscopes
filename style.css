@@ -90,6 +90,10 @@ a:hover{
   color: #ffff66;
 }
 
+img{
+  padding: 5px;
+}
+
 p{
   z-index: 10000;
   visibility: visible;
