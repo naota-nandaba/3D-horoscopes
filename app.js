@@ -17,79 +17,30 @@ function app() {
     ddScorpio, ddSagittarius, ddCapricorn, ddAquarius, ddPisces
   ];
 
-  // //RENDER OPTION BAR
-  // function renderOptions() {
-  //
-  //   var template = _.template(
-  //     "<div class='container-fluid'>" +
-  //     "<div class='row options-row'>" +
-  //
-  //     "<div class='col-xs-2 box options op1'>" +
-  //     "<center>" + "Kudos" +
-  //     "</center>" +
-  //     "</div>" +
-  //
-  //     "<div class='col-xs-2 box options op2'>" +
-  //     "<center>" + "Elle" +
-  //     "</center>" +
-  //     "</div>" +
-  //
-  //     "<div class='col-xs-2 box options op3'>" +
-  //     "<center>" + "Ganesha" +
-  //     "</center>" +
-  //     "</div>" +
-  //
-  //     "<div class='col-xs-2 box options op4'>" +
-  //     "<center>" + "Retro" +
-  //     "</center>" +
-  //     "</div>" +
-  //
-  //     "</div>" +
-  //     "</div>"
-  //   )
-  //   $('#options').append(template());
-  // }
-
-
     //RENDER AZTRO RESULTS
     function renderAztro(result) {
 
       var template = _.template(
-        "<div class='row aztro-row'>" +
-        "<div class='col-md-4 box aztro-content'>" +
-        "<p id='aztro-head'>" + "kudosmedia" + "</p>" +
-        "<p id='aztro-horo'>" + "<i>" + "<%= description %>" + "</i>" + "</p>" +
-        "</div>" +
-        "</div>"// <div row>
+        "<p id='aztro-text'>" + "<b>" + "kudosmedia:" + "<b>" + "<i>" + "<%= description %>" + "</i>" + "</p>"
       )
       //append to results div
       $("#results").append(template(result));
     }
 
-    //RENDER ELLE RESULTS
-    function renderElle(result) {
-
-      var template = _.template(
-        "<div class='row elle-row'>" +
-        "<div class='col-md-4 box elle-content'>" +
-        "<p id='elle-head'>" + "Elle" + "</p>" +
-        "<p id='elle-horo'>" + "<i>" + "." + "</i>" + "</p>" +
-        "</div>" +
-        "</div>"
-      )
-      //append to results div
-      $("#results").append(template(result))
-    }
+    // //RENDER ELLE RESULTS
+    // function renderElle(result) {
+    //
+    //   var template = _.template(
+    //     "<p id='elle-horo'>" "<b>" + "Elle:" + "</b>" + "<i>" + "." + "</i>" + "</p>" +
+    //   )
+    //   //append to results div
+    //   $("#results").append(template(result))
+    // }
 
     //RENDER GANESHA RESULTS
     function renderGanesha(result) {
       var template = _.template(
-        "<div class='row ganesha-row'>" +
-        "<div class='col-md-4 box ganesha-content'>" +
-        "<p id='ganesha-head'>" + "GaneshaSpeaks" + "</p>" +
-        "<p id='ganesha-horo'>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>" +
-        "</div>" +
-        "</div>" // <div row>
+        "<p id='ganesha-text'>" "<b>" + "GaneshaSpeaks:" +  "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>"
       )
       //append to results div
       result.horoscope = result.horoscope.replace(/\['|'\]|\\r\\n/g, '');
@@ -100,14 +51,9 @@ function app() {
     //RENDER RETROGRADE RESULTS
     function renderRetrograde(result) {
       var template = _.template(
-        "<div class='row retro-row'>" +
-        "<div class='col-md-4 box retro-content'>" +
-        "<p id='retro-head'>" + "Is Mercury retrograde?" + "</p>" +
-        "<p id='retro-text'>" + "<i>" +
+        "<p id='retro-text'>" + "<b>" + "Is Mercury retrograde?" + "</b>" + " " + "<i>" +
         "<%= is_retrograde ? 'Yes!' : 'No!' %>" +
-        "</i>" + "</p>" +
-        "</div>" +
-        "</div>" // <div row>
+        "</i>" + "</p>"
       )
       //append to results div
       $("#results").append(template(result))
@@ -138,19 +84,19 @@ function app() {
           }
         })
 
-        //ELLE
-        console.log("Querying Elle...");
-
-        $.ajax({
-          type: 'GET',
-          url: 'elle.hearst.io',
-          success: function(data) {
-            console.log(data);
-
-            // An array of search results
-            renderElle(data);
-          }
-        })
+        // //ELLE
+        // console.log("Querying Elle...");
+        //
+        // $.ajax({
+        //   type: 'GET',
+        //   url: 'elle.hearst.io',
+        //   success: function(data) {
+        //     console.log(data);
+        //
+        //     // An array of search results
+        //     renderElle(data);
+        //   }
+        // })
 
         //GANESHA
         console.log("Querying Ganesha...");
@@ -179,50 +125,9 @@ function app() {
             }
           })
 
-
-
-        // //DELETE OPTION
-        // var op1 = $('.op1');
-        // var op2 = $('.op2');
-        // var op3 = $('.op3');
-        // var op4 = $('.op4');
-        //
-        //
-        // op1.on("click", function(event) {
-        //     $('.aztro-container').empty();
-        //     op1.remove();
-        //   });
-        //
-        //
-        // op2.on("click", function(event) {
-        //     $('.elle-container').empty();
-        //     op2.remove();
-        //   });
-        //
-        //
-        // op3.on("click", function(event) {
-        //     $('.ganesha-container').empty();
-        //     op3.remove();
-        //   });
-        //
-        //
-        // op4.on("click", function(event) {
-        //     $('.retro-container').empty();
-        //     op4.remove();
-        //   });
-        //
-        //
-
-
-
       })
     })
   }
-  //
-  //
-  //
-
-
 
 
   $(app)
