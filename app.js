@@ -40,7 +40,7 @@ function app() {
     //RENDER GANESHA RESULTS
     function renderGanesha(result) {
       var template = _.template(
-        "<p id='ganesha-text'>" "<b>" + "GaneshaSpeaks:" +  "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>"
+        "<p id='ganesha-text'>" + "<b>" + "GaneshaSpeaks:" +  "</b>" + "<i>" + "<%= horoscope %>" + "</i>" + "</p>"
       )
       //append to results div
       result.horoscope = result.horoscope.replace(/\['|'\]|\\r\\n/g, '');
