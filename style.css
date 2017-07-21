@@ -97,17 +97,21 @@ p{
 }
 
 #results{
-  padding: 15px;
+  position: absolute;
+  right: 0;
+  bottom: -200px;
+  left: 0;
+  text-align: center;
 }
 
 .retro-row{
-  width: 25%;
+
 }
 
 .ganesha-row{
-  width: 25%;
+
 }
 
-.aztro.-row{
-  width: 25%;
+.aztro-row{
+
 }
