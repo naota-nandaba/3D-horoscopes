@@ -105,3 +105,12 @@ p{
   left: 0;
   text-align: center;
 }
+
+#planet-info{
+  z-index: 10000;
+  visibility: visible;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  border: 1px solid white;
+}
