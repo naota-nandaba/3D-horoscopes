@@ -43,12 +43,14 @@
 		</div>
 	</div>
 
-	<div>
-		<p id="planet-info">
-			You are looking at planet Mercury.<br> Mercury will be retrograde:<br>
-			I. Dec 19 (2016) - Jan 8 <br> II. Apr 10 - May 3 <br> III. Aug 13 - Sept 5
-			<br> IV. Dec 3 - Dec 23
-		</p>
+	<p id="instructions">
+		Refresh to see a new planet. <br> Select your star sign to see horoscopes and other info.<br>
+	</p>
+
+
+
+	<p id="planet-info">
+	</p>
 
 	<script>
 		var renderer = new THREE.WebGLRenderer({
@@ -95,36 +97,79 @@
 		//////////////////////////////////////////////////////////////////////////////////
 
 		function renderSun() {
+			var template = _.template(
+				"You are looking at the Sun."
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createSun();
 			scene.add(mesh);
 		};
 
 		function renderMercury() {
+			var template = _.template(
+				"You are looking at planet Mercury." + "<br>" +
+				"Mercury will be retrograde:" + "<br>" +
+				"I. Dec 19 (2016) - Jan 8"  + "<br>" +
+				"II. Apr 10 - May 3" + "<br>" +
+				"III. Aug 13 - Sept 5" + "<br>" +
+				"IV. Dec 3 - Dec 23"
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createMercury();
 			scene.add(mesh);
 		};
 
 		function renderVenus() {
+			var template = _.template(
+				"You are looking at planet Venus." + "<br>" +
+				"Venus will be retrograde Mar 5 - Apr 16"
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createVenus();
 			scene.add(mesh);
 		};
 
 		function renderMoon() {
+			var template = _.template(
+				"You are looking at the Moon."
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createMoon();
 			scene.add(mesh);
 		};
 
 		function renderMars() {
+			var template = _.template(
+				"You are looking at planet Mars."
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createMars();
 			scene.add(mesh);
 		};
 
 		function renderJupiter() {
+			var template = _.template(
+				"You are looking at planet Jupiter." + "<br>" +
+				"Jupiter will be retrograde Feb 7 - Jun 10"
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createJupiter();
 			scene.add(mesh);
 		};
 
 		function renderSaturn() {
+			var template = _.template(
+				"You are looking at planet Saturn." + "<br>" +
+				"Saturn will be retrograde Apr 6 - Aug 26."
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createSaturn();
 			mesh.receiveShadow = true;
 			mesh.castShadow = true;
@@ -137,6 +182,12 @@
 
 
 		function renderUranus() {
+			var template = _.template(
+				"You are looking at planet Uranus." + "<br>" +
+				"Uranus will be retrograde Aug 4 - Jan 3 (2018)"
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createUranus();
 			mesh.receiveShadow = true;
 			mesh.castShadow = true;
@@ -148,12 +199,24 @@
 		};
 
 		function renderNeptune() {
+			var template = _.template(
+				"You are looking at planet Neptune." + "<br>" +
+				"Neptune will be retrograde Jun 17 - Nov 23"
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createNeptune();
 			scene.add(mesh);
 		};
 
 
 		function renderPluto() {
+			var template = _.template(
+				"You are looking at Pluto." + "<br>" +
+				"Pluto will be retrograde Apr 21 - Sept 29" 
+			)
+			//append
+			$("#planet-info").append(template(result));
 			var mesh = THREEx.Planets.createPluto();
 			scene.add(mesh);
 		};

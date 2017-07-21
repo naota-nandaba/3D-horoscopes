@@ -19,7 +19,6 @@ function app() {
 
     //RENDER AZTRO RESULTS
     function renderAztro(result) {
-
       var template = _.template(
         "<b>" + "<u>" + "kudosmedia:" + "</u>" + "</b>" +  " " + "<i>" + "<%= description %>" + "</i>" + "          "
       )
