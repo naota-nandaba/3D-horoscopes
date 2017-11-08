@@ -8,7 +8,7 @@ THREEx.Planets.baseURL	= '../'
 
 THREEx.Planets.createSun	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/sunmap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/sunmap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -21,8 +21,8 @@ THREEx.Planets.createSun	= function(){
 THREEx.Planets.createMercury	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/mercurymap.jpg'),
-		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/mercurybump.jpg'),
+		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/mercurymap.jpg'),
+		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/mercurybump.jpg'),
 		bumpScale: 0.005,
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -32,8 +32,8 @@ THREEx.Planets.createMercury	= function(){
 THREEx.Planets.createVenus	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/venusmap.jpg'),
-		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/venusbump.jpg'),
+		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/venusmap.jpg'),
+		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/venusbump.jpg'),
 		bumpScale: 0.005,
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -43,10 +43,10 @@ THREEx.Planets.createVenus	= function(){
 THREEx.Planets.createEarth	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map		: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/earthmap1k.jpg'),
-		bumpMap		: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/earthbump1k.jpg'),
+		map		: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/earthmap1k.jpg'),
+		bumpMap		: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/earthbump1k.jpg'),
 		bumpScale	: 0.05,
-		specularMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/earthspec1k.jpg'),
+		specularMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/earthspec1k.jpg'),
 		specular	: new THREE.Color('grey'),
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -96,9 +96,9 @@ THREEx.Planets.createEarthCloud	= function(){
 			contextResult.putImageData(dataResult,0,0)
 			material.map.needsUpdate = true;
 		})
-		imageTrans.src	= THREEx.Planets.baseURL+'js3-exp/images/earthcloudmaptrans.jpg';
+		imageTrans.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/earthcloudmaptrans.jpg';
 	}, false);
-	imageMap.src	= THREEx.Planets.baseURL+'js3-exp/images/earthcloudmap.jpg';
+	imageMap.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/earthcloudmap.jpg';
 
 	var geometry	= new THREE.SphereGeometry(0.51, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
@@ -115,8 +115,8 @@ THREEx.Planets.createEarthCloud	= function(){
 THREEx.Planets.createMoon	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/moonmap1k.jpg'),
-		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/moonbump1k.jpg'),
+		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/moonmap1k.jpg'),
+		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/moonbump1k.jpg'),
 		bumpScale: 0.002,
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -126,8 +126,8 @@ THREEx.Planets.createMoon	= function(){
 THREEx.Planets.createMars	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/marsmap1k.jpg'),
-		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/marsbump1k.jpg'),
+		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/marsmap1k.jpg'),
+		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/marsbump1k.jpg'),
 		bumpScale: 0.05,
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -136,7 +136,7 @@ THREEx.Planets.createMars	= function(){
 
 THREEx.Planets.createJupiter	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/jupitermap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/jupitermap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -149,7 +149,7 @@ THREEx.Planets.createJupiter	= function(){
 
 THREEx.Planets.createSaturn	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/saturnmap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/saturnmap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -203,9 +203,9 @@ THREEx.Planets.createSaturnRing	= function(){
 			contextResult.putImageData(dataResult,0,0)
 			material.map.needsUpdate = true;
 		})
-		imageTrans.src	= THREEx.Planets.baseURL+'js3-exp/images/saturnringpattern.gif';
+		imageTrans.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/saturnringpattern.gif';
 	}, false);
-	imageMap.src	= THREEx.Planets.baseURL+'js3-exp/images/saturnringcolor.jpg';
+	imageMap.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/saturnringcolor.jpg';
 
 	var geometry	= new THREEx.Planets._RingGeometry(0.55, 0.75, 64);
 	var material	= new THREE.MeshPhongMaterial({
@@ -223,7 +223,7 @@ THREEx.Planets.createSaturnRing	= function(){
 
 THREEx.Planets.createUranus	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/uranusmap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/uranusmap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -276,9 +276,9 @@ THREEx.Planets.createUranusRing	= function(){
 			contextResult.putImageData(dataResult,0,0)
 			material.map.needsUpdate = true;
 		})
-		imageTrans.src	= THREEx.Planets.baseURL+'js3-exp/images/uranusringtrans.gif';
+		imageTrans.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/uranusringtrans.gif';
 	}, false);
-	imageMap.src	= THREEx.Planets.baseURL+'js3-exp/images/uranusringcolour.jpg';
+	imageMap.src	= THREEx.Planets.baseURL+'3D-horoscopes/images/uranusringcolour.jpg';
 
 	var geometry	= new THREEx.Planets._RingGeometry(0.55, 0.75, 64);
 	var material	= new THREE.MeshPhongMaterial({
@@ -296,7 +296,7 @@ THREEx.Planets.createUranusRing	= function(){
 
 THREEx.Planets.createNeptune	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/neptunemap.jpg')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/neptunemap.jpg')
 	var material	= new THREE.MeshPhongMaterial({
 		map	: texture,
 		bumpMap	: texture,
@@ -311,8 +311,8 @@ THREEx.Planets.createNeptune	= function(){
 THREEx.Planets.createPluto	= function(){
 	var geometry	= new THREE.SphereGeometry(0.5, 32, 32)
 	var material	= new THREE.MeshPhongMaterial({
-		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/plutomap1k.jpg'),
-		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/plutobump1k.jpg'),
+		map	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/plutomap1k.jpg'),
+		bumpMap	: THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/plutobump1k.jpg'),
 		bumpScale: 0.005,
 	})
 	var mesh	= new THREE.Mesh(geometry, material)
@@ -320,7 +320,7 @@ THREEx.Planets.createPluto	= function(){
 }
 
 THREEx.Planets.createStarfield	= function(){
-	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'js3-exp/images/galaxy_starfield.png')
+	var texture	= THREE.ImageUtils.loadTexture(THREEx.Planets.baseURL+'3D-horoscopes/images/galaxy_starfield.png')
 	var material	= new THREE.MeshBasicMaterial({
 		map	: texture,
 		side	: THREE.BackSide
