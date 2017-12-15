@@ -1,17 +1,17 @@
 function app() {
   // DROPDOWN MENU VARIABLES
-  var ddAries = $('#aries');
-  var ddTaurus = $('#taurus');
-  var ddGemini = $('#gemini');
-  var ddCancer = $('#cancer');
-  var ddLeo = $('#leo');
-  var ddVirgo = $('#virgo');
-  var ddLibra = $('#libra');
-  var ddScorpio = $('#scorpio');
-  var ddSagittarius = $('#sagittarius');
-  var ddCapricorn = $('#capricorn');
-  var ddAquarius = $('#aquarius');
-  var ddPisces = $('#pisces');
+  var ddAries = $('#Aries');
+  var ddTaurus = $('#Taurus');
+  var ddGemini = $('#Gemini');
+  var ddCancer = $('#Cancer');
+  var ddLeo = $('#Leo');
+  var ddVirgo = $('#Virgo');
+  var ddLibra = $('#Libra');
+  var ddScorpio = $('#Scorpio');
+  var ddSagittarius = $('#Sagittarius');
+  var ddCapricorn = $('#Capricorn');
+  var ddAquarius = $('#Aquarius');
+  var ddPisces = $('#Pisces');
 
   var ddMenu = [ddAries, ddTaurus, ddGemini, ddCancer, ddLeo, ddVirgo, ddLibra,
     ddScorpio, ddSagittarius, ddCapricorn, ddAquarius, ddPisces
