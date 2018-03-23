@@ -26,16 +26,6 @@ function app() {
       $("#results").append(template(result));
     }
 
-    // //RENDER ELLE RESULTS
-    // function renderElle(result) {
-    //
-    //   var template = _.template(
-    //     "<p id='elle-horo'>" "<b>" + "Elle:" + "</b>" + "<i>" + "." + "</i>" + "</p>" +
-    //   )
-    //   //append to results div
-    //   $("#results").append(template(result))
-    // }
-
     //RENDER GANESHA RESULTS
     function renderGanesha(result) {
       var template = _.template(
