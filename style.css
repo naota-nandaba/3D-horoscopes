@@ -153,13 +153,13 @@ p{
 }
 
 #horoscopes{
-  left:10px;
+  margin-left:10px;
   margin-right:10px;
   top:10px;
 }
 
 #results{
-  left:10px;
+  margin-left:10px;
   margin-right:10px;
   top:10px;
 }
