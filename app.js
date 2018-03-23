@@ -75,27 +75,13 @@ function app() {
 
         $.ajax({
           type: 'POST',
-          url: 'https://aztro.herokuapp.com?sign=' + item[0].id + '&day=today',
+          url: 'https://crossorigin.me/https://aztro.herokuapp.com?sign=' + item[0].id + '&day=today',
           success: function(data) {
             console.log(data);
             // An array of search results
             renderAztro(data);
           }
         })
-
-        // //ELLE
-        // console.log("Querying Elle...");
-        //
-        // $.ajax({
-        //   type: 'GET',
-        //   url: 'elle.hearst.io',
-        //   success: function(data) {
-        //     console.log(data);
-        //
-        //     // An array of search results
-        //     renderElle(data);
-        //   }
-        // })
 
         //GANESHA
         console.log("Querying Ganesha...");
