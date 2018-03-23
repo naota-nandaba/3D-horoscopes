@@ -2,6 +2,6 @@
 
 ### If you can't see your horoscope...
 
-Try again in 15 minutes. Since the horoscope information is sourced from small
-independently run APIs, the app will not work if they are overloaded with requests.
+Try again in 15 minutes. The horoscope information is sourced from small
+APIs and the app will not work if they are overloaded with requests.
 Checking many horoscopes in succession may also trigger this effect.
