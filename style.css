@@ -151,21 +151,3 @@ p{
   bottom: 0;
   left: 0;
 }
-
-#horoscopes{
-  z-index: 10000;
-  visibility: visible;
-  overflow:hidden;
-  position:relative;
-}
-
-#results{
-  z-index: 10000;
-  visibility: visible;
-  cursor:pointer;
-  overflow:hidden;
-  position:absolute;
-  left:10px;
-  margin-right:10px;
-  top:10px;
-}
